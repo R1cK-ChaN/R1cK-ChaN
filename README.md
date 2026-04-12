@@ -11,8 +11,8 @@ BEcon Finance, Shenzhen University
 I build autonomous agent systems for financial markets — from macro research pipelines and trading infrastructure. Background in finance, now engineering at the intersection of AI and markets.
 
 [![Website](https://img.shields.io/badge/rick.md-000?style=flat&logo=safari&logoColor=fff)](https://rick.md)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=fff)](https://www.linkedin.com/in/zhikunchen/)
 [![X](https://img.shields.io/badge/@__1RICKk1-000?style=flat&logo=x&logoColor=fff)](https://x.com/_1RICKk1)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=fff)](https://www.linkedin.com/in/zhikunchen/)
 
 ---
 
