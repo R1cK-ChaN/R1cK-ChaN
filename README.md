@@ -37,7 +37,7 @@ Exploring how LLMs work under the hood and documenting lessons from building wit
 
 ### Tech
 
-`Cpp` `Python` `TypeScript` `React` 
+`Python` `TypeScript` `React` 
 
 ---
 
