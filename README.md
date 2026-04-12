@@ -2,9 +2,9 @@
 
 **Quant Agent Engineer** @ Varsity Tech | Singapore  
 MSc Computing, National University of Singapore  
-BEcon (Finance), Shenzhen University
+BEcon Finance, Shenzhen University
 
-I build autonomous agent systems for financial markets — from macro research pipelines and trading infrastructure to formal verification of matching engines. Background in finance, now engineering at the intersection of AI and markets.
+I build autonomous agent systems for financial markets — from macro research pipelines and trading infrastructure. Background in finance, now engineering at the intersection of AI and markets.
 
 [![Website](https://img.shields.io/badge/rick.md-000?style=flat&logo=safari&logoColor=fff)](https://rick.md)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=fff)](https://www.linkedin.com/in/zhikunchen/)
@@ -31,14 +31,13 @@ Systematic strategies and formally verified exchange infrastructure.
 **AI Tooling & Research**  
 Exploring how LLMs work under the hood and documenting lessons from building with them.
 
-- [`claude-reviews-claude`](https://github.com/R1cK-ChaN/claude-reviews-claude) — An AI reading its own source code: Claude's architectural analysis
 - [`mistake`](https://github.com/R1cK-ChaN/mistake) — Engineering handbook for the vibe coding era — real mistakes from building AI agents
 
 ---
 
 ### Tech
 
-`Python` `TypeScript` `React` `LangChain` `n8n` `Claude` `Veil`
+`Cpp` `Python` `TypeScript` `React` 
 
 ---
 
