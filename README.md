@@ -1,7 +1,8 @@
 ## Rick Chan
 
 **Quant Agent Engineer** @ Varsity Tech | Singapore  
-MSc Computing, National University of Singapore
+MSc Computing, National University of Singapore  
+BEcon (Finance), Shenzhen University
 
 I build autonomous agent systems for financial markets — from macro research pipelines and trading infrastructure to formal verification of matching engines. Background in finance, now engineering at the intersection of AI and markets.
 
