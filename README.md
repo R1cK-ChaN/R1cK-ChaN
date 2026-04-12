@@ -1,4 +1,8 @@
-## Rick Chan
+<div align="center">
+  <a href="https://rick.md">
+    <img src="greeting.svg" alt="Hi, I'm Rick — Quant Agent Engineer" />
+  </a>
+</div>
 
 **Quant Agent Engineer** @ Varsity Tech | Singapore  
 MSc Computing, National University of Singapore  
