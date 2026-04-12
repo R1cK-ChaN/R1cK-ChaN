@@ -58,26 +58,12 @@
     </ellipse>
 
     <!-- title -->
-    <text x="435" y="72" text-anchor="middle" fill="#f0f0f2"
+    <text x="450" y="72" text-anchor="middle" fill="#f0f0f2"
       font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
       font-size="28" font-weight="600" letter-spacing="-0.5">
-      Hi, I&#x27;m Rick
-    </text>
-    <!-- waving hand -->
-    <text x="530" y="72" font-size="26"
-      font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
-      &#x1F44B;
-      <animateTransform attributeName="transform" type="rotate"
-        values="0 540 72; 14 540 72; -8 540 72; 14 540 72; -4 540 72; 10 540 72; 0 540 72; 0 540 72"
-        dur="3s" repeatCount="indefinite" />
+      Hello, I&#x27;m Rick Chan
     </text>
 
-    <!-- subtitle -->
-    <text x="450" y="102" text-anchor="middle" fill="#b4b4c3"
-      font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
-      font-size="13" font-weight="400" letter-spacing="1.5">
-      QUANT AGENT ENGINEER
-    </text>
   </g>
 
   <!-- border -->
