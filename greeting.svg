@@ -58,10 +58,18 @@
     </ellipse>
 
     <!-- title -->
-    <text x="450" y="72" text-anchor="middle" fill="#f0f0f2"
+    <text x="435" y="72" text-anchor="middle" fill="#f0f0f2"
       font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
       font-size="28" font-weight="600" letter-spacing="-0.5">
-      Hi, I&#x27;m Rick &#x1F44B;
+      Hi, I&#x27;m Rick
+    </text>
+    <!-- waving hand -->
+    <text x="530" y="72" font-size="26"
+      font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+      &#x1F44B;
+      <animateTransform attributeName="transform" type="rotate"
+        values="0 530 62; 14 530 62; -8 530 62; 14 530 62; -4 530 62; 10 530 62; 0 530 62; 0 530 62"
+        dur="1.8s" repeatCount="indefinite" />
     </text>
 
     <!-- subtitle -->
