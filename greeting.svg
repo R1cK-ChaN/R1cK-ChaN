@@ -1,14 +1,25 @@
 <svg viewBox="0 0 600 160" width="600" height="160" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="blur1">
-      <feGaussianBlur stdDeviation="40" />
-    </filter>
-    <filter id="blur2">
-      <feGaussianBlur stdDeviation="35" />
-    </filter>
-    <filter id="blur3">
-      <feGaussianBlur stdDeviation="30" />
-    </filter>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#386dc2" stop-opacity="0.6" />
+      <stop offset="40%" stop-color="#386dc2" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#386dc2" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6342a8" stop-opacity="0.55" />
+      <stop offset="40%" stop-color="#6342a8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#6342a8" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#149485" stop-opacity="0.5" />
+      <stop offset="40%" stop-color="#149485" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#149485" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4a6fa5" stop-opacity="0.4" />
+      <stop offset="40%" stop-color="#4a6fa5" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#4a6fa5" stop-opacity="0" />
+    </radialGradient>
     <clipPath id="rounded">
       <rect width="600" height="160" rx="14" />
     </clipPath>
@@ -18,32 +29,49 @@
     <!-- dark base -->
     <rect width="600" height="160" fill="#0a0a0f" />
 
-    <!-- flowing blobs -->
-    <ellipse cx="120" cy="40" rx="160" ry="90" fill="rgba(56,109,194,0.55)" filter="url(#blur1)">
-      <animateTransform attributeName="transform" type="translate" values="0,0; 60,-15; 120,10; 40,20; 0,0" dur="8s" repeatCount="indefinite" />
+    <!-- blob 1: blue, top-left -->
+    <ellipse cx="140" cy="30" rx="200" ry="120" fill="url(#glow1)">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 50,-10; 100,15; 30,20; 0,0"
+        dur="8s" repeatCount="indefinite" />
     </ellipse>
 
-    <ellipse cx="480" cy="130" rx="140" ry="80" fill="rgba(99,66,168,0.50)" filter="url(#blur2)">
-      <animateTransform attributeName="transform" type="translate" values="0,0; -50,15; -100,-10; -30,-25; 0,0" dur="10s" repeatCount="indefinite" />
+    <!-- blob 2: purple, bottom-right -->
+    <ellipse cx="470" cy="140" rx="180" ry="110" fill="url(#glow2)">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; -40,10; -90,-15; -20,-20; 0,0"
+        dur="10s" repeatCount="indefinite" />
     </ellipse>
 
-    <ellipse cx="300" cy="80" rx="120" ry="70" fill="rgba(20,148,133,0.40)" filter="url(#blur3)">
-      <animateTransform attributeName="transform" type="translate" values="0,0; 80,15; -40,-10; 0,0" dur="12s" repeatCount="indefinite" />
+    <!-- blob 3: teal, center -->
+    <ellipse cx="300" cy="80" rx="160" ry="100" fill="url(#glow3)">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 70,12; -30,-15; 0,0"
+        dur="12s" repeatCount="indefinite" />
     </ellipse>
 
-    <ellipse cx="180" cy="120" rx="100" ry="60" fill="rgba(56,109,194,0.30)" filter="url(#blur2)">
-      <animateTransform attributeName="transform" type="translate" values="0,0; 30,-25; 100,-10; 50,15; 0,0" dur="9s" repeatCount="indefinite" />
+    <!-- blob 4: blue, bottom-left -->
+    <ellipse cx="200" cy="130" rx="140" ry="90" fill="url(#glow4)">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 25,-20; 80,-5; 40,15; 0,0"
+        dur="9s" repeatCount="indefinite" />
     </ellipse>
 
-    <!-- text -->
-    <text x="300" y="72" text-anchor="middle" fill="#f0f0f2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="-0.5">
-      Hi, I'm Rick 👋
+    <!-- title -->
+    <text x="300" y="72" text-anchor="middle" fill="#f0f0f2"
+      font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
+      font-size="28" font-weight="600" letter-spacing="-0.5">
+      Hi, I&#x27;m Rick &#x1F44B;
     </text>
-    <text x="300" y="102" text-anchor="middle" fill="rgba(180,180,195,0.9)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" letter-spacing="1.5">
+
+    <!-- subtitle -->
+    <text x="300" y="102" text-anchor="middle" fill="#b4b4c3"
+      font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif"
+      font-size="13" font-weight="400" letter-spacing="1.5">
       QUANT AGENT ENGINEER
     </text>
   </g>
 
-  <!-- subtle border -->
-  <rect width="600" height="160" rx="14" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+  <!-- border -->
+  <rect width="600" height="160" rx="14" fill="none" stroke="#222" stroke-width="1" />
 </svg>
