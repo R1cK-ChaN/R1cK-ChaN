@@ -41,7 +41,11 @@ Exploring how LLMs work under the hood and documenting lessons from building wit
 
 ---
 
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=R1cK-ChaN&show_icons=true&theme=default&hide_border=true&bg_color=00000000&title_color=24292f&icon_color=24292f&text_color=57606a&rank_icon=github" height="160"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=R1cK-ChaN&layout=compact&theme=default&hide_border=true&bg_color=00000000&title_color=24292f&text_color=57606a&langs_count=5" height="160"/>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=R1cK-ChaN&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" />
+  <img src="https://github-readme-stats.vercel.app/api?username=R1cK-ChaN&show_icons=true&theme=default&hide_border=true&rank_icon=github" height="160" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=R1cK-ChaN&layout=compact&theme=github_dark&hide_border=true&langs_count=5" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=R1cK-ChaN&layout=compact&theme=default&hide_border=true&langs_count=5" height="160" />
+</picture>
