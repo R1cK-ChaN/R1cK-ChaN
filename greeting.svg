@@ -1,158 +1,49 @@
-<svg fill="none" viewBox="0 0 800 200" width="800" height="200" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @keyframes wave {
-      0%, 100% { transform: rotate(0deg) }
-      10% { transform: rotate(14deg) }
-      20% { transform: rotate(-8deg) }
-      30% { transform: rotate(14deg) }
-      40% { transform: rotate(-4deg) }
-      50% { transform: rotate(10deg) }
-      60% { transform: rotate(0deg) }
-    }
+<svg viewBox="0 0 600 160" width="600" height="160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="35" />
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+    <clipPath id="rounded">
+      <rect width="600" height="160" rx="14" />
+    </clipPath>
+  </defs>
 
-    @keyframes drift1 {
-      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6 }
-      25% { transform: translate(60px, -20px) scale(1.1); opacity: 0.8 }
-      50% { transform: translate(120px, 10px) scale(0.95); opacity: 0.5 }
-      75% { transform: translate(40px, 20px) scale(1.05); opacity: 0.7 }
-    }
+  <g clip-path="url(#rounded)">
+    <!-- dark base -->
+    <rect width="600" height="160" fill="#0a0a0f" />
 
-    @keyframes drift2 {
-      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5 }
-      25% { transform: translate(-50px, 15px) scale(1.08); opacity: 0.7 }
-      50% { transform: translate(-100px, -10px) scale(0.9); opacity: 0.6 }
-      75% { transform: translate(-30px, -25px) scale(1.12); opacity: 0.4 }
-    }
+    <!-- flowing blobs -->
+    <ellipse cx="120" cy="40" rx="160" ry="90" fill="rgba(56,109,194,0.55)" filter="url(#blur1)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 60,-15; 120,10; 40,20; 0,0" dur="8s" repeatCount="indefinite" />
+    </ellipse>
 
-    @keyframes drift3 {
-      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4 }
-      33% { transform: translate(80px, 15px) scale(1.15); opacity: 0.6 }
-      66% { transform: translate(-40px, -10px) scale(0.92); opacity: 0.5 }
-    }
+    <ellipse cx="480" cy="130" rx="140" ry="80" fill="rgba(99,66,168,0.50)" filter="url(#blur2)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -50,15; -100,-10; -30,-25; 0,0" dur="10s" repeatCount="indefinite" />
+    </ellipse>
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(6px) }
-      100% { opacity: 1; transform: translateY(0) }
-    }
+    <ellipse cx="300" cy="80" rx="120" ry="70" fill="rgba(20,148,133,0.40)" filter="url(#blur3)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 80,15; -40,-10; 0,0" dur="12s" repeatCount="indefinite" />
+    </ellipse>
 
-    .parent {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-    }
+    <ellipse cx="180" cy="120" rx="100" ry="60" fill="rgba(56,109,194,0.30)" filter="url(#blur2)">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 30,-25; 100,-10; 50,15; 0,0" dur="9s" repeatCount="indefinite" />
+    </ellipse>
 
-    .container {
-      width: 600px;
-      height: 160px;
-      border-radius: 14px;
-      position: relative;
-      overflow: hidden;
-      background: #0a0a0f;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 20px auto;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
+    <!-- text -->
+    <text x="300" y="72" text-anchor="middle" fill="#f0f0f2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="-0.5">
+      Hi, I'm Rick 👋
+    </text>
+    <text x="300" y="102" text-anchor="middle" fill="rgba(180,180,195,0.9)" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" letter-spacing="1.5">
+      QUANT AGENT ENGINEER
+    </text>
+  </g>
 
-    .glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(60px);
-      pointer-events: none;
-    }
-
-    .g1 {
-      width: 280px;
-      height: 140px;
-      background: radial-gradient(ellipse, rgba(56, 109, 194, 0.55), transparent 70%);
-      top: -30px;
-      left: 40px;
-      animation: drift1 8s ease-in-out infinite;
-    }
-
-    .g2 {
-      width: 240px;
-      height: 120px;
-      background: radial-gradient(ellipse, rgba(99, 66, 168, 0.5), transparent 70%);
-      bottom: -20px;
-      right: 60px;
-      animation: drift2 10s ease-in-out infinite;
-    }
-
-    .g3 {
-      width: 200px;
-      height: 100px;
-      background: radial-gradient(ellipse, rgba(20, 148, 133, 0.4), transparent 70%);
-      top: 40px;
-      left: 220px;
-      animation: drift3 12s ease-in-out infinite;
-    }
-
-    .g4 {
-      width: 160px;
-      height: 100px;
-      background: radial-gradient(ellipse, rgba(56, 109, 194, 0.3), transparent 70%);
-      bottom: 10px;
-      left: 80px;
-      animation: drift2 9s ease-in-out infinite reverse;
-    }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      color: #f0f0f2;
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      animation: fadeIn 0.6s ease forwards;
-      text-shadow: 0 0 30px rgba(56, 109, 194, 0.3);
-    }
-
-    p {
-      margin: 8px 0 0 0;
-      color: rgba(180, 180, 195, 0.9);
-      font-size: 15px;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      animation: fadeIn 0.6s ease 0.2s forwards;
-      opacity: 0;
-    }
-
-    .wave-hand {
-      animation: wave 2s ease-in-out infinite;
-      display: inline-block;
-      transform-origin: 70% 70%;
-    }
-
-    @media (prefers-reduced-motion) {
-      .container * { animation: none !important }
-      .glow { opacity: 0.5 }
-      p { opacity: 1 }
-    }
-  </style>
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" class="parent">
-      <div class="container">
-        <div class="glow g1"></div>
-        <div class="glow g2"></div>
-        <div class="glow g3"></div>
-        <div class="glow g4"></div>
-        <div class="content">
-          <h1>Hi, I'm Rick <span class="wave-hand">&#x1F44B;</span></h1>
-          <p>Quant Agent Engineer</p>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+  <!-- subtle border -->
+  <rect width="600" height="160" rx="14" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
 </svg>
