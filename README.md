@@ -42,10 +42,10 @@ Exploring how LLMs work under the hood and documenting lessons from building wit
 ---
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=R1cK-ChaN&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github" />
-  <img src="https://github-readme-stats.vercel.app/api?username=R1cK-ChaN&show_icons=true&theme=default&hide_border=true&rank_icon=github" height="160" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=R1cK-ChaN&theme=github_dark" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=R1cK-ChaN&theme=default" height="160" />
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=R1cK-ChaN&layout=compact&theme=github_dark&hide_border=true&langs_count=5" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=R1cK-ChaN&layout=compact&theme=default&hide_border=true&langs_count=5" height="160" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=R1cK-ChaN&theme=github_dark" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=R1cK-ChaN&theme=default" height="160" />
 </picture>
