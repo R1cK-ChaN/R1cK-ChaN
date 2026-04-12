@@ -10,91 +10,148 @@
       60% { transform: rotate(0deg) }
     }
 
+    @keyframes drift1 {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6 }
+      25% { transform: translate(60px, -20px) scale(1.1); opacity: 0.8 }
+      50% { transform: translate(120px, 10px) scale(0.95); opacity: 0.5 }
+      75% { transform: translate(40px, 20px) scale(1.05); opacity: 0.7 }
+    }
+
+    @keyframes drift2 {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5 }
+      25% { transform: translate(-50px, 15px) scale(1.08); opacity: 0.7 }
+      50% { transform: translate(-100px, -10px) scale(0.9); opacity: 0.6 }
+      75% { transform: translate(-30px, -25px) scale(1.12); opacity: 0.4 }
+    }
+
+    @keyframes drift3 {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4 }
+      33% { transform: translate(80px, 15px) scale(1.15); opacity: 0.6 }
+      66% { transform: translate(-40px, -10px) scale(0.92); opacity: 0.5 }
+    }
+
     @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(8px) }
+      0% { opacity: 0; transform: translateY(6px) }
       100% { opacity: 1; transform: translateY(0) }
     }
 
-    @keyframes shimmer {
-      0% { background-position: -200% 0 }
-      100% { background-position: 200% 0 }
+    .parent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
     }
 
     .container {
-      --bg: #1a1a1a;
-      --text: #f0f0f0;
-      --sub: #999999;
-      --border: #333333;
-      --accent: #666666;
-
       width: 600px;
       height: 160px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--bg);
-
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      background: #0a0a0f;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin: 20px auto;
-
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
-    @media (prefers-color-scheme: light) {
-      .container {
-        --bg: #ffffff;
-        --text: #1a1a1a;
-        --sub: #666666;
-        --border: #e0e0e0;
-        --accent: #999999;
-      }
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      pointer-events: none;
     }
 
-    @media (prefers-reduced-motion) {
-      .container * { animation: none !important }
+    .g1 {
+      width: 280px;
+      height: 140px;
+      background: radial-gradient(ellipse, rgba(56, 109, 194, 0.55), transparent 70%);
+      top: -30px;
+      left: 40px;
+      animation: drift1 8s ease-in-out infinite;
     }
 
-    .wave {
+    .g2 {
+      width: 240px;
+      height: 120px;
+      background: radial-gradient(ellipse, rgba(99, 66, 168, 0.5), transparent 70%);
+      bottom: -20px;
+      right: 60px;
+      animation: drift2 10s ease-in-out infinite;
+    }
+
+    .g3 {
+      width: 200px;
+      height: 100px;
+      background: radial-gradient(ellipse, rgba(20, 148, 133, 0.4), transparent 70%);
+      top: 40px;
+      left: 220px;
+      animation: drift3 12s ease-in-out infinite;
+    }
+
+    .g4 {
+      width: 160px;
+      height: 100px;
+      background: radial-gradient(ellipse, rgba(56, 109, 194, 0.3), transparent 70%);
+      bottom: 10px;
+      left: 80px;
+      animation: drift2 9s ease-in-out infinite reverse;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: #f0f0f2;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      animation: fadeIn 0.6s ease forwards;
+      text-shadow: 0 0 30px rgba(56, 109, 194, 0.3);
+    }
+
+    p {
+      margin: 8px 0 0 0;
+      color: rgba(180, 180, 195, 0.9);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      animation: fadeIn 0.6s ease 0.2s forwards;
+      opacity: 0;
+    }
+
+    .wave-hand {
       animation: wave 2s ease-in-out infinite;
       display: inline-block;
       transform-origin: 70% 70%;
     }
 
-    h1 {
-      margin: 0;
-      padding: 0;
-      color: var(--text);
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      animation: fadeIn 0.6s ease forwards;
-    }
-
-    p {
-      margin: 6px 0 0 0;
-      padding: 0;
-      color: var(--sub);
-      font-size: 15px;
-      font-weight: 400;
-      letter-spacing: 0.5px;
-      animation: fadeIn 0.6s ease 0.2s forwards;
-      opacity: 0;
-    }
-
-    .parent {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    @media (prefers-reduced-motion) {
+      .container * { animation: none !important }
+      .glow { opacity: 0.5 }
+      p { opacity: 1 }
     }
   </style>
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml" class="parent">
       <div class="container">
-        <h1>Hi, I'm Rick <span class="wave">&#x1F44B;</span></h1>
-        <p>Quant Agent Engineer</p>
+        <div class="glow g1"></div>
+        <div class="glow g2"></div>
+        <div class="glow g3"></div>
+        <div class="glow g4"></div>
+        <div class="content">
+          <h1>Hi, I'm Rick <span class="wave-hand">&#x1F44B;</span></h1>
+          <p>Quant Agent Engineer</p>
+        </div>
       </div>
     </div>
   </foreignObject>
