@@ -42,14 +42,3 @@ Exploring how LLMs work under the hood and documenting lessons from building wit
 ### Tech
 
 `Python` `TypeScript` `React` 
-
----
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=R1cK-ChaN&theme=github_dark" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=R1cK-ChaN&theme=default" height="160" />
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=R1cK-ChaN&theme=github_dark" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=R1cK-ChaN&theme=default" height="160" />
-</picture>
